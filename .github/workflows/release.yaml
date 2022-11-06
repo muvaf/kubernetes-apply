@@ -16,6 +16,8 @@ jobs:
       - run: yarn install --immutable --immutable-cache --check-cache
       - run: yarn tsc
       - run: yarn build
-      - run: yarn publish --new-version ${{ github.ref_name }} --access public
+      # VERSION has v prefix but yarn wants valid semver.
+      - run: yarn publish --new-version ${VERSION:1} --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          VERSION: ${{ github.ref_name }}
