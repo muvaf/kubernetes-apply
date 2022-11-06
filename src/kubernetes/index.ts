@@ -1,0 +1,1 @@
+export { kubernetesApply } from "./apply";

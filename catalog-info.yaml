@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: scaffolder-backend-module-kubernetes-apply
+  description: |
+    A custom Backstage scaffolder action to apply any Kubernetes resource.
+  links:
+    - title: Repository
+      url: https://github.com/muvaf/kubernetes-apply
+    - title: npm
+      url: https://www.npmjs.com/package/@muvaf/kubernetes-apply
+  annotations:
+    github.com/project-slug: muvaf/kubernetes-apply
+  tags:
+    - backstage
+    - kubernetes
+    - apply
+    - scaffold
+    - action
+    - plugin
+    - template
+spec:
+  type: library
+  owner: muvaf
+  lifecycle: production
