@@ -79,7 +79,7 @@ spec:
           kind: Application
           metadata:
             name: deploy
-            namespace: ${{ parameters.serviceName }}
+            namespace: default
           spec:
             destination:
               namespace: ${{ parameters.serviceName }}
